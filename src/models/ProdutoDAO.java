@@ -40,13 +40,14 @@ public class ProdutoDAO {
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
+        }finally{
+            Banco.desconectar();
         }
 
     }
 
     public List listar() {
         con = Banco.conectar();
-
         try {
             sql = "SELECT nome,preco FROM produto";
             st = con.prepareStatement(sql);
@@ -61,33 +62,13 @@ public class ProdutoDAO {
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
+        }finally{
+            Banco.desconectar();
         }
 
         return listaP;
     }
     
-    public List inserirProdutoTabela(int codigo) {
-        con = Banco.conectar();
-
-        try {
-            sql = "SELECT nome,preco FROM produto WHERE id = ?";
-            st = con.prepareStatement(sql);
-            st.setInt(1, codigo);
-            rs = st.executeQuery();
-            while (rs.next()) {
-                Produto p = new Produto();
-                p.setNome(rs.getString("nome"));
-
-                p.setPreco(rs.getFloat("preco"));
-                listaP.add(p);
-            }
-
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-
-        return listaP;
-    }
 
     public Produto buscarProduto(int pesquisa) {
         con = Banco.conectar();
@@ -105,6 +86,8 @@ public class ProdutoDAO {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
             return null;
+        }finally{
+            Banco.desconectar();
         }
     }
 

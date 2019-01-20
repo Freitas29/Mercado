@@ -278,7 +278,6 @@ public class Loja extends javax.swing.JFrame {
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
         int key = evt.getKeyCode();
         if (key == KeyEvent.VK_ENTER) {
-            Toolkit.getDefaultToolkit().beep();
             insertTabela();
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
