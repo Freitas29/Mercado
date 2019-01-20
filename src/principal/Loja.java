@@ -5,6 +5,8 @@
  */
 package principal;
 
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -138,6 +140,11 @@ public class Loja extends javax.swing.JFrame {
         txtProduto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtProduto.setForeground(new java.awt.Color(240, 240, 240));
         txtProduto.setBorder(null);
+        txtProduto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtProdutoKeyPressed(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -265,23 +272,20 @@ public class Loja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-//        
-//        //Instânciando a classe de produto
-//        Produto produto = new Produto();
-//        //Instânciando a tabela
-//        ModeloTabela produtoTableModel = new ModeloTabela();
-//        //criando tabela
-//        tabelaMercado.setModel(produtoTableModel);
-//        //Pegando valor do campo
-//        
-//        
-//        produto = pDAO.buscarProduto(codigo);
-//        //Criando o array list
-//        List<Produto> lista;
-//        lista = pDAO.inserirProdutoTabela(codigo);
-//        produtoTableModel.adicionarLinha(lista);
-        // Instânciando a classe de inserção
-        int codigo = Integer.parseInt(txtProduto.getText());
+       insertTabela();
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
+        int key = evt.getKeyCode();
+        if (key == KeyEvent.VK_ENTER) {
+            Toolkit.getDefaultToolkit().beep();
+            insertTabela();
+        }
+    }//GEN-LAST:event_txtProdutoKeyPressed
+
+    
+    public void insertTabela(){
+         int codigo = Integer.parseInt(txtProduto.getText());
         Produto produto = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
         //Buscando produto
@@ -293,8 +297,7 @@ public class Loja extends javax.swing.JFrame {
         txtProduto.setText("");
         totalCompra = totalCompra + produto.getPreco();
         txtResultadoCompra.setText(String.valueOf(totalCompra));
-    }//GEN-LAST:event_jLabel5MouseClicked
-
+    }
     /**
      * @param args the command line arguments
      */
