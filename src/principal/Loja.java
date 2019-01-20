@@ -272,7 +272,7 @@ public class Loja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-       insertTabela();
+        insertTabela();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
@@ -283,21 +283,26 @@ public class Loja extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
 
-    
-    public void insertTabela(){
-         int codigo = Integer.parseInt(txtProduto.getText());
+    public void insertTabela() {
+        int codigo = Integer.parseInt(txtProduto.getText());
         Produto produto = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
         //Buscando produto
         produto = dao.buscarProduto(codigo);
         String nomeProduto = produto.getNome();
-        String resu = String.valueOf(produto.getPreco());
-        DefaultTableModel val = (DefaultTableModel) tabelaMercado.getModel();
-        val.addRow(new String[]{nomeProduto, resu});
-        txtProduto.setText("");
-        totalCompra = totalCompra + produto.getPreco();
-        txtResultadoCompra.setText(String.valueOf(totalCompra));
+        String precoProduto = String.valueOf(produto.getPreco());
+        if ("0.0".equals(precoProduto)) {
+            JOptionPane.showMessageDialog(null, "Não cadastrado");
+        } else {
+            DefaultTableModel val = (DefaultTableModel) tabelaMercado.getModel();
+            val.addRow(new String[]{nomeProduto, precoProduto});
+            txtProduto.setText("");
+            totalCompra = totalCompra + produto.getPreco();
+            txtResultadoCompra.setText(String.valueOf(totalCompra));
+        }
+
     }
+
     /**
      * @param args the command line arguments
      */
