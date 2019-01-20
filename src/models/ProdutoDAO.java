@@ -26,17 +26,16 @@ public class ProdutoDAO {
     private ResultSet rs;
     List<Produto> listaP = new ArrayList<>();
 
-    public void cadastrar(String nome, String categoria, float preco, int qtd) {
+    public void cadastrar(Produto p) {
         con = Banco.conectar();
         try {
-            sql = "insert into produto(nome,categoria,preco,quantidade)values(?,?,?,?)";
+            sql = "insert into produto(nome,preco,quantidade)values(?,?,?)";
             st = con.prepareStatement(sql);
-            st.setString(1, nome);
-            st.setString(2, categoria);
-            st.setFloat(3, preco);
-            st.setInt(4, qtd);
+            st.setString(1, p.getNome());
+            st.setFloat(2, p.getPreco());
+            st.setInt(3, p.getQtd());
             st.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Produto Cadastrado");
+            JOptionPane.showMessageDialog(null, p.getNome()+" Cadastrado");
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
