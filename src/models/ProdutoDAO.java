@@ -29,11 +29,12 @@ public class ProdutoDAO {
     public void cadastrar(Produto p) {
         con = Banco.conectar();
         try {
-            sql = "insert into produto(nome,preco,quantidade)values(?,?,?)";
+            sql = "insert into produto(id,nome,preco,quatidade)values(?,?,?,?)";
             st = con.prepareStatement(sql);
-            st.setString(1, p.getNome());
-            st.setFloat(2, p.getPreco());
-            st.setInt(3, p.getQtd());
+            st.setString(1, p.getId());
+            st.setString(2, p.getNome());
+            st.setFloat(3, p.getPreco());
+            st.setInt(4, p.getQtd());
             st.executeUpdate();
             JOptionPane.showMessageDialog(null, p.getNome()+" Cadastrado");
 
@@ -69,13 +70,13 @@ public class ProdutoDAO {
     }
     
 
-    public Produto buscarProduto(int pesquisa) {
+    public Produto buscarProduto(String pesquisa) {
         con = Banco.conectar();
         Produto p = new Produto();
         try {
             sql = "Select nome,preco from produto where id = ?";
             st = con.prepareStatement(sql);
-            st.setInt(1, pesquisa);
+            st.setString(1, pesquisa);
             rs = st.executeQuery();
             while (rs.next()) {
                 p.setNome(rs.getString("nome"));

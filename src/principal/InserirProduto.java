@@ -55,6 +55,10 @@ public class InserirProduto extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtQtd = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        txtCodigo = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
 
         jButton1.setText("jButton1");
 
@@ -203,41 +207,60 @@ public class InserirProduto extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 57, 127));
         jLabel1.setText("Nome do Produto");
         jPanel3.add(jLabel1);
-        jLabel1.setBounds(79, 99, 140, 22);
+        jLabel1.setBounds(80, 180, 140, 22);
 
         txtProduto.setForeground(new java.awt.Color(255, 57, 127));
         txtProduto.setBorder(null);
         jPanel3.add(txtProduto);
-        txtProduto.setBounds(79, 122, 260, 30);
+        txtProduto.setBounds(80, 210, 260, 30);
         jPanel3.add(jSeparator1);
-        jSeparator1.setBounds(79, 158, 260, 10);
+        jSeparator1.setBounds(80, 240, 260, 10);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 57, 127));
         jLabel2.setText("Preço do Produto");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(79, 217, 140, 22);
+        jLabel2.setBounds(80, 300, 140, 22);
         jPanel3.add(jSeparator2);
-        jSeparator2.setBounds(79, 281, 260, 10);
+        jSeparator2.setBounds(80, 360, 260, 10);
 
         txtPreco.setForeground(new java.awt.Color(255, 57, 127));
         txtPreco.setBorder(null);
         txtPreco.setCaretColor(new java.awt.Color(240, 240, 240));
         jPanel3.add(txtPreco);
-        txtPreco.setBounds(79, 245, 260, 30);
+        txtPreco.setBounds(80, 330, 260, 30);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 57, 127));
         jLabel3.setText("Quantidade do Produto");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(79, 335, 186, 22);
+        jLabel3.setBounds(80, 420, 186, 22);
 
         txtQtd.setForeground(new java.awt.Color(255, 57, 127));
         txtQtd.setBorder(null);
         jPanel3.add(txtQtd);
-        txtQtd.setBounds(79, 368, 260, 30);
+        txtQtd.setBounds(80, 450, 260, 30);
         jPanel3.add(jSeparator3);
-        jSeparator3.setBounds(79, 399, 260, 10);
+        jSeparator3.setBounds(80, 480, 260, 10);
+
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 57, 127));
+        jLabel11.setText("Nome do Produto");
+        jPanel3.add(jLabel11);
+        jLabel11.setBounds(80, 180, 140, 22);
+
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 57, 127));
+        jLabel12.setText("Código Produto");
+        jPanel3.add(jLabel12);
+        jLabel12.setBounds(80, 70, 125, 22);
+
+        txtCodigo.setForeground(new java.awt.Color(255, 57, 127));
+        txtCodigo.setBorder(null);
+        jPanel3.add(txtCodigo);
+        txtCodigo.setBounds(80, 100, 260, 30);
+        jPanel3.add(jSeparator4);
+        jSeparator4.setBounds(80, 130, 260, 10);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(220, 0, 790, 710);
@@ -263,6 +286,7 @@ public class InserirProduto extends javax.swing.JFrame {
     private void lblCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCadastrarMouseClicked
         Produto p = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
+        p.setId(txtCodigo.getText());
         p.setNome(txtProduto.getText());
         p.setPreco(Float.parseFloat(txtPreco.getText()));
         p.setQtd(Integer.parseInt(txtQtd.getText()));
@@ -313,6 +337,8 @@ public class InserirProduto extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -330,7 +356,9 @@ public class InserirProduto extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblCadastrar;
+    private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtPreco;
     private javax.swing.JTextField txtProduto;
     private javax.swing.JTextField txtQtd;

@@ -399,7 +399,7 @@ public class Loja extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel7MouseClicked
 
     public void insertTabela(int qtd) {
-        int codigo = Integer.parseInt(txtProduto.getText().trim());
+        String codigo = txtProduto.getText().trim();
         Produto produto = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
         //Buscando produto

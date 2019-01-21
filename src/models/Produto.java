@@ -11,6 +11,23 @@ package models;
  */
 public class Produto {
     private String nome,cateogoria;
+    private String id;
+
+    public String getCateogoria() {
+        return cateogoria;   
+    }
+
+    public void setCateogoria(String cateogoria) {
+        this.cateogoria = cateogoria;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     private float preco;
     private int qtd; 
 
