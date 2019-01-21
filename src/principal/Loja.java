@@ -28,7 +28,8 @@ public class Loja extends javax.swing.JFrame {
      */
     public Loja() {
         initComponents();
-
+        this.setLocationRelativeTo(null);
+        modalDados.setVisible(false);
     }
 
     /**
@@ -40,16 +41,25 @@ public class Loja extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        modalDados = new javax.swing.JPanel();
+        jSeparator3 = new javax.swing.JSeparator();
+        txtQtd = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        lblCancelarProduto = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         lblLoja = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblInserir = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         txtProduto = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaMercado = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -62,7 +72,47 @@ public class Loja extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        modalDados.setBackground(new java.awt.Color(0, 1, 16));
+        modalDados.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        modalDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        modalDados.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 224, 10));
+
+        txtQtd.setBackground(new java.awt.Color(0, 1, 16));
+        txtQtd.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtQtd.setForeground(new java.awt.Color(255, 255, 255));
+        txtQtd.setBorder(null);
+        txtQtd.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtQtdKeyPressed(evt);
+            }
+        });
+        modalDados.add(txtQtd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 224, 30));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel4.setText("Quantidade");
+        modalDados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+
+        lblCancelarProduto.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblCancelarProduto.setForeground(new java.awt.Color(240, 240, 240));
+        lblCancelarProduto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCancelarProduto.setText("Cancelar");
+        lblCancelarProduto.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        lblCancelarProduto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCancelarProdutoMouseClicked(evt);
+            }
+        });
+        modalDados.add(lblCancelarProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 170, 60));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/button (1).png"))); // NOI18N
+        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        modalDados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 360, 130));
+
+        getContentPane().add(modalDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 460, 380));
+
         jPanel1.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(39, 55, 80));
 
@@ -79,60 +129,97 @@ public class Loja extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(36, 36, 36)
+                .addGap(37, 37, 37)
                 .addComponent(lblLoja, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(lblLoja)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblLoja))
+                .addGap(30, 30, 30))
         );
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(0, 80, 220, 89);
 
         lblInserir.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblInserir.setForeground(new java.awt.Color(255, 255, 255));
-        lblInserir.setText("Funcionario");
+        lblInserir.setText("Cadastrar");
         lblInserir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblInserirMouseClicked(evt);
             }
         });
+        jPanel1.add(lblInserir);
+        lblInserir.setBounds(90, 30, 105, 29);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/user-symbol-person_108512.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 10, 48, 48);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
+        jPanel6.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel6.setPreferredSize(new java.awt.Dimension(184, 84));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Editar");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(lblInserir)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 67, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblInserir)
-                        .addGap(28, 28, 28)))
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(539, Short.MAX_VALUE))
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(29, 29, 29))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1.add(jPanel6);
+        jPanel6.setBounds(0, 160, 220, 84);
+
+        jPanel7.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel7);
+        jPanel7.setBounds(0, 0, 220, 80);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 710));
 
@@ -150,13 +237,6 @@ public class Loja extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -166,20 +246,15 @@ public class Loja extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
                     .addComponent(txtProduto))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(txtProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(txtProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
 
@@ -190,11 +265,11 @@ public class Loja extends javax.swing.JFrame {
 
             },
             new String [] {
-                "NOME", "PREÇO"
+                "NOME", "PREÇO", "QUANTIDADE", "TOTAL"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -205,6 +280,8 @@ public class Loja extends javax.swing.JFrame {
         if (tabelaMercado.getColumnModel().getColumnCount() > 0) {
             tabelaMercado.getColumnModel().getColumn(0).setResizable(false);
             tabelaMercado.getColumnModel().getColumn(1).setResizable(false);
+            tabelaMercado.getColumnModel().getColumn(2).setResizable(false);
+            tabelaMercado.getColumnModel().getColumn(3).setResizable(false);
         }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 780, 490));
@@ -276,35 +353,76 @@ public class Loja extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        insertTabela();
+
+
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
         int key = evt.getKeyCode();
-        if (key == KeyEvent.VK_ENTER) { 
-            insertTabela();
+        if (key == KeyEvent.VK_ENTER) {
+            if ("".equals(txtProduto.getText().trim()) || " ".equals(txtProduto.getText().trim())) {
+                JOptionPane.showMessageDialog(null, "Digite um código válido    ");
+            } else {
+                modalDados.setVisible(true);
+                txtQtd.requestFocusInWindow();
+            }
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
 
     private void lblInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInserirMouseClicked
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_lblInserirMouseClicked
 
-    public void insertTabela() {
-        int codigo = Integer.parseInt(txtProduto.getText());
+    private void lblCancelarProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarProdutoMouseClicked
+        txtQtd.setText("");
+        txtProduto.setText("");
+        modalDados.setVisible(false);
+    }//GEN-LAST:event_lblCancelarProdutoMouseClicked
+
+    private void txtQtdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtQtdKeyPressed
+        int key = evt.getKeyCode();
+        if (key == KeyEvent.VK_ENTER) {
+            if ("".equals(txtQtd.getText().trim()) || " ".equals(txtQtd.getText().trim())) {
+                insertTabela(1);
+                modalDados.setVisible(false);
+            } else {
+                int qtd = Integer.parseInt(txtQtd.getText());
+                insertTabela(qtd);
+                modalDados.setVisible(false);
+            }
+        }
+    }//GEN-LAST:event_txtQtdKeyPressed
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        this.setVisible(false);
+        new InserirProduto().setVisible(true);
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    public void insertTabela(int qtd) {
+        int codigo = Integer.parseInt(txtProduto.getText().trim());
         Produto produto = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
         //Buscando produto
         produto = dao.buscarProduto(codigo);
+        //salvando em String os dados para poder passar a tabela
+
         String nomeProduto = produto.getNome();
         String precoProduto = String.valueOf(produto.getPreco());
+        String qtdProduto = String.valueOf(qtd);
+        String totalProduto = String.valueOf(qtd * produto.getPreco());
+        //Verificando se chegou vazio
         if ("0.0".equals(precoProduto)) {
             JOptionPane.showMessageDialog(null, "Não cadastrado");
         } else {
+            //Criando o modelo de tabela
             DefaultTableModel val = (DefaultTableModel) tabelaMercado.getModel();
-            val.addRow(new String[]{nomeProduto, precoProduto});
+            //Adicionando as linhas
+            val.addRow(new String[]{nomeProduto, precoProduto, qtdProduto, totalProduto});
+            //Limpando os campos
             txtProduto.setText("");
-            totalCompra = totalCompra + produto.getPreco();
+            txtQtd.setText("");
+            //Pegando o total da compra
+            totalCompra = totalCompra + qtd * produto.getPreco();
             txtResultadoCompra.setText(String.valueOf(totalCompra));
         }
 
@@ -346,7 +464,10 @@ public class Loja extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -356,13 +477,19 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel lblCancelarProduto;
     private javax.swing.JLabel lblInserir;
     private javax.swing.JLabel lblLoja;
+    private javax.swing.JPanel modalDados;
     private javax.swing.JTable tabelaMercado;
     private javax.swing.JTextField txtProduto;
+    private javax.swing.JTextField txtQtd;
     private javax.swing.JTextField txtResultadoCompra;
     // End of variables declaration//GEN-END:variables
 }
