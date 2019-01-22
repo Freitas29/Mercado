@@ -5,6 +5,7 @@
  */
 package principal;
 
+import javax.swing.JOptionPane;
 import models.Produto;
 import models.ProdutoDAO;
 
@@ -284,18 +285,38 @@ public class InserirProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCadastrarMouseClicked
-        Produto p = new Produto();
-        ProdutoDAO dao = new ProdutoDAO();
-        p.setId(txtCodigo.getText());
-        p.setNome(txtProduto.getText());
-        p.setPreco(Float.parseFloat(txtPreco.getText()));
-        p.setQtd(Integer.parseInt(txtQtd.getText()));
-        dao.cadastrar(p);
+        if ("".equals(txtCodigo.getText().trim()) || "".equals(txtPreco.getText().trim()) || "".equals(txtProduto.getText().trim()) || "".equals(txtQtd.getText().trim())) {
+            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+        } else {
+            try {
+
+                Produto p = new Produto();
+                ProdutoDAO dao = new ProdutoDAO();
+                p.setCodigo(txtCodigo.getText());
+                boolean produtoExiste = dao.verificaProduto(p.getCodigo());
+                if (produtoExiste == true) {
+                    JOptionPane.showMessageDialog(null, "Produto já cadastrado");
+                } else {
+                    p.setNome(txtProduto.getText());
+                    p.setPreco(Float.parseFloat(txtPreco.getText()));
+                    p.setQtd(Integer.parseInt(txtQtd.getText()));
+                    boolean resultado = dao.cadastrar(p);
+                    if (resultado == true) {
+                        txtCodigo.setText("");
+                        txtPreco.setText("");
+                        txtProduto.setText("");
+                        txtQtd.setText("");
+                    }
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Campo preenchido com valor errado");
+            }
+        }
     }//GEN-LAST:event_lblCadastrarMouseClicked
 
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
-       this.setVisible(false);
-       new Loja().setVisible(true);
+        this.setVisible(false);
+        new Loja().setVisible(true);
     }//GEN-LAST:event_jPanel5MouseClicked
 
     /**

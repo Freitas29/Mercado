@@ -48,15 +48,15 @@ public class Loja extends javax.swing.JFrame {
         lblCancelarProduto = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        pnlLoja = new javax.swing.JPanel();
         lblLoja = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblInserir = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        pnlEditar = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        pnlCadastrar = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         txtProduto = new javax.swing.JTextField();
@@ -114,7 +114,7 @@ public class Loja extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(22, 33, 53));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(39, 55, 80));
+        pnlLoja.setBackground(new java.awt.Color(39, 55, 80));
 
         lblLoja.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblLoja.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,29 +122,29 @@ public class Loja extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/shoppaymentorderbuy-20_icon-icons.com_73877.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlLojaLayout = new javax.swing.GroupLayout(pnlLoja);
+        pnlLoja.setLayout(pnlLojaLayout);
+        pnlLojaLayout.setHorizontalGroup(
+            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLojaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(37, 37, 37)
                 .addComponent(lblLoja, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(47, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        pnlLojaLayout.setVerticalGroup(
+            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLojaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(lblLoja))
                 .addGap(30, 30, 30))
         );
 
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 80, 220, 89);
+        jPanel1.add(pnlLoja);
+        pnlLoja.setBounds(0, 80, 220, 89);
 
         lblInserir.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblInserir.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,8 +166,13 @@ public class Loja extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(10, 10, 48, 48);
 
-        jPanel6.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel6.setPreferredSize(new java.awt.Dimension(184, 84));
+        pnlEditar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlEditar.setPreferredSize(new java.awt.Dimension(184, 84));
+        pnlEditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlEditarMouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
 
@@ -175,51 +180,51 @@ public class Loja extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Editar");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlEditarLayout = new javax.swing.GroupLayout(pnlEditar);
+        pnlEditar.setLayout(pnlEditarLayout);
+        pnlEditarLayout.setHorizontalGroup(
+            pnlEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEditarLayout.createSequentialGroup()
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(0, 67, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+        pnlEditarLayout.setVerticalGroup(
+            pnlEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditarLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(29, 29, 29))
-            .addGroup(jPanel6Layout.createSequentialGroup()
+            .addGroup(pnlEditarLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel6);
-        jPanel6.setBounds(0, 160, 220, 84);
+        jPanel1.add(pnlEditar);
+        pnlEditar.setBounds(0, 160, 220, 84);
 
-        jPanel7.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlCadastrar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel7MouseClicked(evt);
+                pnlCadastrarMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCadastrarLayout = new javax.swing.GroupLayout(pnlCadastrar);
+        pnlCadastrar.setLayout(pnlCadastrarLayout);
+        pnlCadastrarLayout.setHorizontalGroup(
+            pnlCadastrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 220, Short.MAX_VALUE)
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlCadastrarLayout.setVerticalGroup(
+            pnlCadastrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel7);
-        jPanel7.setBounds(0, 0, 220, 80);
+        jPanel1.add(pnlCadastrar);
+        pnlCadastrar.setBounds(0, 0, 220, 80);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 710));
 
@@ -393,10 +398,14 @@ public class Loja extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtQtdKeyPressed
 
-    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+    private void pnlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrarMouseClicked
         this.setVisible(false);
         new InserirProduto().setVisible(true);
-    }//GEN-LAST:event_jPanel7MouseClicked
+    }//GEN-LAST:event_pnlCadastrarMouseClicked
+
+    private void pnlEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlEditarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pnlEditarMouseClicked
 
     public void insertTabela(int qtd) {
         String codigo = txtProduto.getText().trim();
@@ -473,12 +482,9 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
@@ -487,6 +493,9 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JLabel lblInserir;
     private javax.swing.JLabel lblLoja;
     private javax.swing.JPanel modalDados;
+    private javax.swing.JPanel pnlCadastrar;
+    private javax.swing.JPanel pnlEditar;
+    private javax.swing.JPanel pnlLoja;
     private javax.swing.JTable tabelaMercado;
     private javax.swing.JTextField txtProduto;
     private javax.swing.JTextField txtQtd;
