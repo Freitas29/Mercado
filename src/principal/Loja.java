@@ -404,7 +404,8 @@ public class Loja extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlCadastrarMouseClicked
 
     private void pnlEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlEditarMouseClicked
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new Editar().setVisible(true);
     }//GEN-LAST:event_pnlEditarMouseClicked
 
     public void insertTabela(int qtd) {

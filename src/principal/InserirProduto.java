@@ -146,6 +146,11 @@ public class InserirProduto extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(22, 33, 53));
         jPanel6.setPreferredSize(new java.awt.Dimension(220, 84));
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
 
@@ -318,6 +323,11 @@ public class InserirProduto extends javax.swing.JFrame {
         this.setVisible(false);
         new Loja().setVisible(true);
     }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+        this.setVisible(false);
+        new Editar().setVisible(true);
+    }//GEN-LAST:event_jPanel6MouseClicked
 
     /**
      * @param args the command line arguments
