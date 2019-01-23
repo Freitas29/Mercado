@@ -35,6 +35,8 @@ public class Loja extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         modalDados.setVisible(false);
+        pnlFinalizarCompra.setVisible(false);
+
     }
 
     /**
@@ -46,6 +48,17 @@ public class Loja extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlFinalizarCompra = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        txtTotalCompra = new javax.swing.JTextField();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        txtPagamento = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtTroco = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        jLabel12 = new javax.swing.JLabel();
         modalDados = new javax.swing.JPanel();
         jSeparator3 = new javax.swing.JSeparator();
         txtQtd = new javax.swing.JTextField();
@@ -73,6 +86,7 @@ public class Loja extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         txtResultadoCompra = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addKeyListener(new java.awt.event.KeyAdapter() {
@@ -81,6 +95,62 @@ public class Loja extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlFinalizarCompra.setBackground(new java.awt.Color(0, 1, 16));
+        pnlFinalizarCompra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("Pagamento");
+        pnlFinalizarCompra.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+
+        txtTotalCompra.setBackground(new java.awt.Color(0, 1, 16));
+        txtTotalCompra.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtTotalCompra.setForeground(new java.awt.Color(255, 255, 255));
+        txtTotalCompra.setBorder(null);
+        pnlFinalizarCompra.add(txtTotalCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 150, 30));
+        pnlFinalizarCompra.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 150, 50));
+        pnlFinalizarCompra.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 150, -1));
+
+        txtPagamento.setBackground(new java.awt.Color(0, 1, 16));
+        txtPagamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtPagamento.setForeground(new java.awt.Color(255, 255, 255));
+        txtPagamento.setBorder(null);
+        txtPagamento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPagamentoKeyPressed(evt);
+            }
+        });
+        pnlFinalizarCompra.add(txtPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 150, 40));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel10.setText("Total");
+        pnlFinalizarCompra.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, 30));
+
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel11.setText("Troco");
+        pnlFinalizarCompra.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, 30));
+
+        txtTroco.setBackground(new java.awt.Color(0, 1, 16));
+        txtTroco.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        txtTroco.setForeground(new java.awt.Color(255, 255, 255));
+        txtTroco.setBorder(null);
+        txtTroco.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtTrocoKeyPressed(evt);
+            }
+        });
+        pnlFinalizarCompra.add(txtTroco, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 150, 40));
+        pnlFinalizarCompra.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 150, -1));
+
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel12.setText("R$");
+        pnlFinalizarCompra.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
+
+        getContentPane().add(pnlFinalizarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 430, 310));
 
         modalDados.setBackground(new java.awt.Color(0, 1, 16));
         modalDados.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray));
@@ -332,12 +402,19 @@ public class Loja extends javax.swing.JFrame {
         txtResultadoCompra.setForeground(new java.awt.Color(255, 255, 255));
         txtResultadoCompra.setBorder(null);
 
+        jLabel8.setBackground(new java.awt.Color(39, 55, 80));
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("F4");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(512, Short.MAX_VALUE)
+                .addContainerGap(450, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
@@ -350,16 +427,19 @@ public class Loja extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(txtResultadoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6)))
+                        .addContainerGap(46, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel7)
+                                .addComponent(txtResultadoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel6)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(26, 26, 26))
         );
 
@@ -375,7 +455,6 @@ public class Loja extends javax.swing.JFrame {
 
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
         int key = evt.getKeyCode();
-        ProdutoDAO dao = new ProdutoDAO();
         if (key == KeyEvent.VK_ENTER) {
             if ("".equals(txtProduto.getText().trim()) || " ".equals(txtProduto.getText().trim())) {
                 JOptionPane.showMessageDialog(null, "Digite um código válido");
@@ -386,18 +465,9 @@ public class Loja extends javax.swing.JFrame {
         }
 
         if (key == KeyEvent.VK_F4) {
-            //Retirando do estoque
-            for (int i = 0; i < listaId.size(); i++) {
-                dao.retiraEstoque(listaId.get(i), listaQtd.get(i));
-            }
-            //Limpando a mémoria;
-            listaId = null;
-            listaQtd = null;
-            txtResultadoCompra.setText("");
-            //Limpando a tabela
-            while (tabelaMercado.getModel().getRowCount() > 0) {
-                ((DefaultTableModel) tabelaMercado.getModel()).removeRow(0);
-            }
+            pnlFinalizarCompra.setVisible(true);
+            txtTotalCompra.setText(String.valueOf(totalCompra));
+            txtPagamento.requestFocusInWindow();
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
 
@@ -440,6 +510,37 @@ public class Loja extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formKeyPressed
 
+    private void txtPagamentoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPagamentoKeyPressed
+        int key = evt.getKeyCode();
+        if (key == KeyEvent.VK_ENTER) {
+            txtTroco.setText(String.valueOf(Float.parseFloat(txtPagamento.getText()) - totalCompra));
+            int conf = JOptionPane.showConfirmDialog(null, "Limpar compra?");
+            if (conf == 0) {
+                ProdutoDAO dao = new ProdutoDAO();
+                //Retirando do estoque
+                for (int i = 0; i < listaId.size(); i++) {
+                    dao.retiraEstoque(listaId.get(i), listaQtd.get(i));
+                }
+                //Limpando a mémoria;
+                listaId = null;
+                listaQtd = null;
+                txtResultadoCompra.setText("");
+                //Limpando a tabela
+                while (tabelaMercado.getModel().getRowCount() > 0) {
+                    ((DefaultTableModel) tabelaMercado.getModel()).removeRow(0);
+                }
+                
+                pnlFinalizarCompra.setVisible(false);
+            }
+        }
+
+
+    }//GEN-LAST:event_txtPagamentoKeyPressed
+
+    private void txtTrocoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTrocoKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTrocoKeyPressed
+
     public void insertTabela(int qtd) {
 
         String codigo = txtProduto.getText().trim();
@@ -468,6 +569,7 @@ public class Loja extends javax.swing.JFrame {
             txtQtd.setText("");
             //Pegando o total da compra
             totalCompra = totalCompra + qtd * produto.getPreco();
+            
             txtResultadoCompra.setText(String.valueOf(totalCompra));
         }
 
@@ -510,6 +612,9 @@ public class Loja extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -517,6 +622,8 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -525,16 +632,23 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel lblCancelarProduto;
     private javax.swing.JLabel lblInserir;
     private javax.swing.JLabel lblLoja;
     private javax.swing.JPanel modalDados;
     private javax.swing.JPanel pnlCadastrar;
     private javax.swing.JPanel pnlEditar;
+    private javax.swing.JPanel pnlFinalizarCompra;
     private javax.swing.JPanel pnlLoja;
     private javax.swing.JTable tabelaMercado;
+    private javax.swing.JTextField txtPagamento;
     private javax.swing.JTextField txtProduto;
     private javax.swing.JTextField txtQtd;
     private javax.swing.JTextField txtResultadoCompra;
+    private javax.swing.JTextField txtTotalCompra;
+    private javax.swing.JTextField txtTroco;
     // End of variables declaration//GEN-END:variables
 }
