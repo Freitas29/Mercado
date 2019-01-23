@@ -35,10 +35,10 @@ public class InserirProduto extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        pnlInserir = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        pnlLoja = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -73,44 +73,54 @@ public class InserirProduto extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(220, 710));
         jPanel2.setLayout(null);
 
-        jPanel4.setBackground(new java.awt.Color(39, 55, 80));
-        jPanel4.setPreferredSize(new java.awt.Dimension(220, 84));
+        pnlInserir.setBackground(new java.awt.Color(39, 55, 80));
+        pnlInserir.setPreferredSize(new java.awt.Dimension(220, 84));
+        pnlInserir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlInserirMouseClicked(evt);
+            }
+        });
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(240, 240, 240));
         jLabel8.setText("Cadastrar");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlInserirLayout = new javax.swing.GroupLayout(pnlInserir);
+        pnlInserir.setLayout(pnlInserirLayout);
+        pnlInserirLayout.setHorizontalGroup(
+            pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInserirLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(25, 25, 25))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        pnlInserirLayout.setVerticalGroup(
+            pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInserirLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8)
                     .addComponent(jLabel7))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel4);
-        jPanel4.setBounds(0, 0, 220, 84);
+        jPanel2.add(pnlInserir);
+        pnlInserir.setBounds(0, 0, 220, 84);
 
-        jPanel5.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel5.setPreferredSize(new java.awt.Dimension(220, 84));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlLoja.setBackground(new java.awt.Color(22, 33, 53));
+        pnlLoja.setPreferredSize(new java.awt.Dimension(220, 84));
+        pnlLoja.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
+                pnlLojaMouseClicked(evt);
             }
         });
 
@@ -120,29 +130,29 @@ public class InserirProduto extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
         jLabel9.setText("Loja");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlLojaLayout = new javax.swing.GroupLayout(pnlLoja);
+        pnlLoja.setLayout(pnlLojaLayout);
+        pnlLojaLayout.setHorizontalGroup(
+            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlLojaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addGap(37, 37, 37)
                 .addComponent(jLabel9)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        pnlLojaLayout.setVerticalGroup(
+            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlLojaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
                     .addComponent(jLabel5))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel5);
-        jPanel5.setBounds(0, 80, 220, 84);
+        jPanel2.add(pnlLoja);
+        pnlLoja.setBounds(0, 80, 220, 84);
 
         jPanel6.setBackground(new java.awt.Color(22, 33, 53));
         jPanel6.setPreferredSize(new java.awt.Dimension(220, 84));
@@ -319,15 +329,23 @@ public class InserirProduto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblCadastrarMouseClicked
 
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+    private void pnlLojaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLojaMouseClicked
         this.setVisible(false);
         new Loja().setVisible(true);
-    }//GEN-LAST:event_jPanel5MouseClicked
+    }//GEN-LAST:event_pnlLojaMouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         this.setVisible(false);
         new Editar().setVisible(true);
     }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void pnlInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlInserirMouseClicked
+       
+    }//GEN-LAST:event_pnlInserirMouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -381,14 +399,14 @@ public class InserirProduto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblCadastrar;
+    private javax.swing.JPanel pnlInserir;
+    private javax.swing.JPanel pnlLoja;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtPreco;
     private javax.swing.JTextField txtProduto;

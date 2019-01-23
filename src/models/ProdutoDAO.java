@@ -124,5 +124,23 @@ public class ProdutoDAO {
             Banco.desconectar();
         }
     }
+    
+    
+    public boolean retiraEstoque(String codigo,int qtd){
+        con = Banco.conectar();
+        try{
+            sql = "update produto set quatidade = quatidade-? where codigo = ?";
+            st = con.prepareStatement(sql);
+            st.setInt(1, qtd);
+            st.setString(2, codigo);
+            st.executeUpdate();
+            return true;
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Erro no banco"+e);
+            return false;
+        }finally{
+            Banco.desconectar();
+        }
+    }
 
 }

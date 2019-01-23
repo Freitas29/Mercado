@@ -7,6 +7,7 @@ package principal;
 
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -22,6 +23,10 @@ public class Loja extends javax.swing.JFrame {
     //Variável Global para fazer o resultado da compra
 
     float totalCompra;
+    //Array para pegar cada id para depois ser excluido do banco
+    List<String> listaId = new ArrayList<>();
+    //Array para pegar cada quantidade para depois ser excluido do banco
+    List<Integer> listaQtd = new ArrayList<>();
 
     /**
      * Creates new form Loja
@@ -62,14 +67,19 @@ public class Loja extends javax.swing.JFrame {
         txtProduto = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaMercado = new javax.swing.JTable();
+        jPanel5 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         txtResultadoCompra = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         modalDados.setBackground(new java.awt.Color(0, 1, 16));
@@ -107,7 +117,7 @@ public class Loja extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/button (1).png"))); // NOI18N
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        modalDados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 360, 130));
+        modalDados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 360, 130));
 
         getContentPane().add(modalDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 460, 380));
 
@@ -270,11 +280,11 @@ public class Loja extends javax.swing.JFrame {
 
             },
             new String [] {
-                "NOME", "PREÇO", "QUANTIDADE", "TOTAL"
+                "CÓDIGO", "NOME", "PREÇO", "QUANTIDADE", "TOTAL"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -287,9 +297,25 @@ public class Loja extends javax.swing.JFrame {
             tabelaMercado.getColumnModel().getColumn(1).setResizable(false);
             tabelaMercado.getColumnModel().getColumn(2).setResizable(false);
             tabelaMercado.getColumnModel().getColumn(3).setResizable(false);
+            tabelaMercado.getColumnModel().getColumn(4).setResizable(false);
         }
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 780, 490));
+
+        jPanel5.setBackground(new java.awt.Color(21, 28, 52));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 100, 10, 490));
 
         jPanel4.setBackground(new java.awt.Color(21, 28, 52));
         jPanel4.setEnabled(false);
@@ -324,35 +350,20 @@ public class Loja extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addGap(9, 9, 9)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)
-                                .addComponent(txtResultadoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtResultadoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6)))
                 .addGap(26, 26, 26))
         );
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, 790, 120));
-
-        jPanel5.setBackground(new java.awt.Color(21, 28, 52));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 100, 10, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -364,12 +375,28 @@ public class Loja extends javax.swing.JFrame {
 
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
         int key = evt.getKeyCode();
+        ProdutoDAO dao = new ProdutoDAO();
         if (key == KeyEvent.VK_ENTER) {
             if ("".equals(txtProduto.getText().trim()) || " ".equals(txtProduto.getText().trim())) {
-                JOptionPane.showMessageDialog(null, "Digite um código válido    ");
+                JOptionPane.showMessageDialog(null, "Digite um código válido");
             } else {
                 modalDados.setVisible(true);
                 txtQtd.requestFocusInWindow();
+            }
+        }
+
+        if (key == KeyEvent.VK_F4) {
+            //Retirando do estoque
+            for (int i = 0; i < listaId.size(); i++) {
+                dao.retiraEstoque(listaId.get(i), listaQtd.get(i));
+            }
+            //Limpando a mémoria;
+            listaId = null;
+            listaQtd = null;
+            txtResultadoCompra.setText("");
+            //Limpando a tabela
+            while (tabelaMercado.getModel().getRowCount() > 0) {
+                ((DefaultTableModel) tabelaMercado.getModel()).removeRow(0);
             }
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
@@ -398,6 +425,7 @@ public class Loja extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtQtdKeyPressed
 
+
     private void pnlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrarMouseClicked
         this.setVisible(false);
         new InserirProduto().setVisible(true);
@@ -408,7 +436,12 @@ public class Loja extends javax.swing.JFrame {
         new Editar().setVisible(true);
     }//GEN-LAST:event_pnlEditarMouseClicked
 
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+
+    }//GEN-LAST:event_formKeyPressed
+
     public void insertTabela(int qtd) {
+
         String codigo = txtProduto.getText().trim();
         Produto produto = new Produto();
         ProdutoDAO dao = new ProdutoDAO();
@@ -420,6 +453,8 @@ public class Loja extends javax.swing.JFrame {
         String precoProduto = String.valueOf(produto.getPreco());
         String qtdProduto = String.valueOf(qtd);
         String totalProduto = String.valueOf(qtd * produto.getPreco());
+        listaId.add(codigo);
+        listaQtd.add(qtd);
         //Verificando se chegou vazio
         if ("0.0".equals(precoProduto)) {
             JOptionPane.showMessageDialog(null, "Não cadastrado");
@@ -427,7 +462,7 @@ public class Loja extends javax.swing.JFrame {
             //Criando o modelo de tabela
             DefaultTableModel val = (DefaultTableModel) tabelaMercado.getModel();
             //Adicionando as linhas
-            val.addRow(new String[]{nomeProduto, precoProduto, qtdProduto, totalProduto});
+            val.addRow(new String[]{codigo, nomeProduto, precoProduto, qtdProduto, totalProduto});
             //Limpando os campos
             txtProduto.setText("");
             txtQtd.setText("");
