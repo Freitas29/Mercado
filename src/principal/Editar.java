@@ -23,9 +23,11 @@ public class Editar extends javax.swing.JFrame {
     ProdutoDAO pDAO = new ProdutoDAO();
     ModeloTabela modeloTabela = new ModeloTabela();
     List<Produto> lista;
+    Produto produto = new Produto();
 
     public Editar() {
         initComponents();
+        pnlAtualizar.setVisible(false);
         this.setLocationRelativeTo(null);
         tabelaMercado.setModel(modeloTabela);
         listarProdutos();
@@ -47,6 +49,23 @@ public class Editar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlAtualizar = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        txtCodigo = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        txtPreco = new javax.swing.JTextField();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel10 = new javax.swing.JLabel();
+        txtQtd = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
+        lblAtualizar = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        lblCancelar = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         pnlCadastrar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -63,6 +82,89 @@ public class Editar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1010, 710));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlAtualizar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlAtualizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel7.setText("Codigo");
+        pnlAtualizar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        pnlAtualizar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 190, 10));
+
+        txtCodigo.setBackground(new java.awt.Color(22, 33, 53));
+        txtCodigo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtCodigo.setForeground(new java.awt.Color(240, 240, 240));
+        txtCodigo.setBorder(null);
+        pnlAtualizar.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 57, 190, 30));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel8.setText("Nome");
+        pnlAtualizar.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
+
+        txtNome.setBackground(new java.awt.Color(22, 33, 53));
+        txtNome.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtNome.setForeground(new java.awt.Color(240, 240, 240));
+        txtNome.setBorder(null);
+        pnlAtualizar.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 190, 30));
+        pnlAtualizar.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 190, 10));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("Preço");
+        pnlAtualizar.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        txtPreco.setBackground(new java.awt.Color(22, 33, 53));
+        txtPreco.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtPreco.setForeground(new java.awt.Color(240, 240, 240));
+        txtPreco.setBorder(null);
+        pnlAtualizar.add(txtPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 190, 30));
+        pnlAtualizar.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 190, 10));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel10.setText("Quantidade");
+        pnlAtualizar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
+
+        txtQtd.setBackground(new java.awt.Color(22, 33, 53));
+        txtQtd.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        txtQtd.setForeground(new java.awt.Color(240, 240, 240));
+        txtQtd.setBorder(null);
+        pnlAtualizar.add(txtQtd, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 190, 30));
+        pnlAtualizar.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 190, 10));
+
+        lblAtualizar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblAtualizar.setForeground(new java.awt.Color(240, 240, 240));
+        lblAtualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAtualizar.setText("Atualizar");
+        lblAtualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblAtualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAtualizarMouseClicked(evt);
+            }
+        });
+        pnlAtualizar.add(lblAtualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 392, 170, 40));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/button (1).png"))); // NOI18N
+        pnlAtualizar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 320, 350, 130));
+
+        lblCancelar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblCancelar.setForeground(new java.awt.Color(240, 240, 240));
+        lblCancelar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCancelar.setText("Cancelar");
+        lblCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCancelarMouseClicked(evt);
+            }
+        });
+        pnlAtualizar.add(lblCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 390, 170, 40));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/button (1).png"))); // NOI18N
+        pnlAtualizar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 350, 130));
+
+        getContentPane().add(pnlAtualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 640, 460));
 
         jPanel1.setBackground(new java.awt.Color(22, 33, 53));
         jPanel1.setPreferredSize(new java.awt.Dimension(220, 710));
@@ -231,12 +333,29 @@ public class Editar extends javax.swing.JFrame {
                 }
             }
         }
+
+        if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_A) {
+            pnlAtualizar.setVisible(true);
+
+            if (tabelaMercado.getSelectedRow() == -1) {
+                JOptionPane.showMessageDialog(null, "Selecione uma linha para apagar");
+            } else {
+                //Pegando o codigo da linha selecionada
+                Object obj = tabelaMercado.getValueAt(tabelaMercado.getSelectedRow(), 0);
+                produto = pDAO.buscarProduto(obj.toString());
+                txtCodigo.setText(produto.getCodigo());
+                txtNome.setText(produto.getNome());
+                txtPreco.setText(String.valueOf(produto.getPreco()));
+                txtQtd.setText(String.valueOf(produto.getQtd()));
+            }
+
+        }
     }//GEN-LAST:event_tabelaMercadoKeyPressed
 
     private void pnlLojaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLojaMouseClicked
         this.setVisible(false);
         new Loja().setVisible(true);
-        
+
     }//GEN-LAST:event_pnlLojaMouseClicked
 
     private void pnlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrarMouseClicked
@@ -247,6 +366,25 @@ public class Editar extends javax.swing.JFrame {
     private void tabelaMercadoInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_tabelaMercadoInputMethodTextChanged
 
     }//GEN-LAST:event_tabelaMercadoInputMethodTextChanged
+
+    private void lblCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarMouseClicked
+        pnlAtualizar.setVisible(false);
+    }//GEN-LAST:event_lblCancelarMouseClicked
+
+    private void lblAtualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAtualizarMouseClicked
+        produto.setNome(txtNome.getText());
+        produto.setPreco(Float.parseFloat(txtPreco.getText()));
+        produto.setCodigo(txtCodigo.getText());
+        produto.setQtd(Integer.parseInt(txtCodigo.getText()));
+        boolean resu = pDAO.atualiza(produto);
+        if (resu == true) {
+            pnlAtualizar.setVisible(false);
+            modeloTabela.atualizar();
+            lista = pDAO.listar();
+            modeloTabela.adicionarLinha(lista);
+        }
+
+    }//GEN-LAST:event_lblAtualizarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -286,16 +424,33 @@ public class Editar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JLabel lblAtualizar;
+    private javax.swing.JLabel lblCancelar;
+    private javax.swing.JPanel pnlAtualizar;
     private javax.swing.JPanel pnlCadastrar;
     private javax.swing.JPanel pnlLoja;
     private javax.swing.JTable tabelaMercado;
+    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtPreco;
+    private javax.swing.JTextField txtQtd;
     // End of variables declaration//GEN-END:variables
 }

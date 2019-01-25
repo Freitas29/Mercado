@@ -53,7 +53,7 @@ public class ProdutoDAO {
             st = con.prepareStatement(sql);
             st.setString(1, produto);
             st.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Excluido com sucesso");
+            JOptionPane.showMessageDialog(null, "Excluido com sucesso");
             return true;
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Erro no banco: " + e.getMessage());
@@ -91,13 +91,15 @@ public class ProdutoDAO {
         con = Banco.conectar();
         Produto p = new Produto();
         try {
-            sql = "Select nome,preco from produto where codigo = ?";
+            sql = "Select nome,preco,quatidade,codigo from produto where codigo = ?";
             st = con.prepareStatement(sql);
             st.setString(1, pesquisa);
             rs = st.executeQuery();
             while (rs.next()) {
                 p.setNome(rs.getString("nome"));
                 p.setPreco(rs.getFloat("preco"));
+                p.setQtd(rs.getInt("quatidade"));
+                p.setCodigo(rs.getString("codigo"));
             }
             return p;
         } catch (SQLException e) {
@@ -124,20 +126,40 @@ public class ProdutoDAO {
             Banco.desconectar();
         }
     }
-    
-    
-    public boolean retiraEstoque(String codigo,int qtd){
+
+    public boolean retiraEstoque(String codigo, int qtd) {
         con = Banco.conectar();
-        try{
+        try {
             sql = "update produto set quatidade = quatidade-? where codigo = ?";
             st = con.prepareStatement(sql);
             st.setInt(1, qtd);
             st.setString(2, codigo);
             st.executeUpdate();
             return true;
-        }catch(SQLException e){
-            JOptionPane.showMessageDialog(null, "Erro no banco"+e);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Erro no banco" + e);
             return false;
+        } finally {
+            Banco.desconectar();
+        }
+    }
+
+    public boolean atualiza(Produto p) {
+        con = Banco.conectar();
+        try {
+            sql = "update produto set nome = ?, preco = ?,quatidade = ?,codigo = ? where codigo = ?";
+            st = con.prepareStatement(sql);
+            st.setString(1, p.getNome());
+            st.setFloat(2, p.getPreco());
+            st.setInt(3, p.getQtd());
+            st.setString(4, p.getCodigo());
+            st.setString(5, p.getCodigo());
+            
+            st.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+             JOptionPane.showMessageDialog(null, "Erro no banco" + e);
+             return false;
         }finally{
             Banco.desconectar();
         }
