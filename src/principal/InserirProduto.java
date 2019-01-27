@@ -33,17 +33,20 @@ public class InserirProduto extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        pnlInserir = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        pnlLoja = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        pnlPesquisar = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        pnlCadastrar1 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        pnlLoja1 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         lblCadastrar = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,136 +68,128 @@ public class InserirProduto extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel6.setPreferredSize(new java.awt.Dimension(220, 710));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlPesquisar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlPesquisar.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlPesquisar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlPesquisarMouseClicked(evt);
+            }
+        });
+        pnlPesquisar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel14.setText("Pesquisar");
+        pnlPesquisar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, 60));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/3-search-cat_icon-icons.com_76679.png"))); // NOI18N
+        pnlPesquisar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, 80, 68));
+
+        jPanel6.add(pnlPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, -1));
+
+        pnlCadastrar1.setBackground(new java.awt.Color(39, 55, 80));
+        pnlCadastrar1.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlCadastrar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlCadastrar1MouseClicked(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Cadastrar");
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+
+        javax.swing.GroupLayout pnlCadastrar1Layout = new javax.swing.GroupLayout(pnlCadastrar1);
+        pnlCadastrar1.setLayout(pnlCadastrar1Layout);
+        pnlCadastrar1Layout.setHorizontalGroup(
+            pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastrar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(21, 21, 21))
+        );
+        pnlCadastrar1Layout.setVerticalGroup(
+            pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastrar1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel16))
+                .addGap(21, 21, 21))
+        );
+
+        jPanel6.add(pnlCadastrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        pnlLoja1.setBackground(new java.awt.Color(22, 33, 53));
+        pnlLoja1.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlLoja1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlLoja1MouseClicked(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel18.setText("Loja");
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/shoppaymentorderbuy-20_icon-icons.com_73877.png"))); // NOI18N
+
+        javax.swing.GroupLayout pnlLoja1Layout = new javax.swing.GroupLayout(pnlLoja1);
+        pnlLoja1.setLayout(pnlLoja1Layout);
+        pnlLoja1Layout.setHorizontalGroup(
+            pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoja1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel18)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        pnlLoja1Layout.setVerticalGroup(
+            pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoja1Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addGroup(pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addGap(20, 20, 20))
+        );
+
+        jPanel6.add(pnlLoja1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
+
+        jPanel7.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel7.setPreferredSize(new java.awt.Dimension(220, 80));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel20.setText("Editar");
+        jPanel7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, 60));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
+        jPanel7.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 12, 63, 68));
+
+        jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1010, 710));
         jPanel1.setLayout(null);
-
-        jPanel2.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel2.setPreferredSize(new java.awt.Dimension(220, 710));
-        jPanel2.setLayout(null);
-
-        pnlInserir.setBackground(new java.awt.Color(39, 55, 80));
-        pnlInserir.setPreferredSize(new java.awt.Dimension(220, 84));
-        pnlInserir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlInserirMouseClicked(evt);
-            }
-        });
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel8.setText("Cadastrar");
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlInserirLayout = new javax.swing.GroupLayout(pnlInserir);
-        pnlInserir.setLayout(pnlInserirLayout);
-        pnlInserirLayout.setHorizontalGroup(
-            pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlInserirLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(25, 25, 25))
-        );
-        pnlInserirLayout.setVerticalGroup(
-            pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlInserirLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlInserirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel7))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(pnlInserir);
-        pnlInserir.setBounds(0, 0, 220, 84);
-
-        pnlLoja.setBackground(new java.awt.Color(22, 33, 53));
-        pnlLoja.setPreferredSize(new java.awt.Dimension(220, 84));
-        pnlLoja.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlLojaMouseClicked(evt);
-            }
-        });
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/shoppaymentorderbuy-20_icon-icons.com_73877.png"))); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel9.setText("Loja");
-
-        javax.swing.GroupLayout pnlLojaLayout = new javax.swing.GroupLayout(pnlLoja);
-        pnlLoja.setLayout(pnlLojaLayout);
-        pnlLojaLayout.setHorizontalGroup(
-            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlLojaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel9)
-                .addContainerGap(80, Short.MAX_VALUE))
-        );
-        pnlLojaLayout.setVerticalGroup(
-            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlLojaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel5))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(pnlLoja);
-        pnlLoja.setBounds(0, 80, 220, 84);
-
-        jPanel6.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel6.setPreferredSize(new java.awt.Dimension(220, 84));
-        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel6MouseClicked(evt);
-            }
-        });
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
-
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel10.setText("Editar");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel10)
-                .addGap(0, 67, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(20, 20, 20))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel6);
-        jPanel6.setBounds(0, 160, 220, 84);
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 220, 710);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setForeground(new java.awt.Color(35, 68, 50));
@@ -281,20 +276,7 @@ public class InserirProduto extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(220, 0, 790, 710);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -329,23 +311,25 @@ public class InserirProduto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_lblCadastrarMouseClicked
 
-    private void pnlLojaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLojaMouseClicked
+    private void pnlPesquisarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPesquisarMouseClicked
+        this.setVisible(false);
+        new Pesquisar().setVisible(true);
+    }//GEN-LAST:event_pnlPesquisarMouseClicked
+
+    private void pnlCadastrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrar1MouseClicked
+        this.setVisible(false);
+        new InserirProduto().setVisible(true);
+    }//GEN-LAST:event_pnlCadastrar1MouseClicked
+
+    private void pnlLoja1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLoja1MouseClicked
         this.setVisible(false);
         new Loja().setVisible(true);
-    }//GEN-LAST:event_pnlLojaMouseClicked
+    }//GEN-LAST:event_pnlLoja1MouseClicked
 
-    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         this.setVisible(false);
         new Editar().setVisible(true);
-    }//GEN-LAST:event_jPanel6MouseClicked
-
-    private void pnlInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlInserirMouseClicked
-       
-    }//GEN-LAST:event_pnlInserirMouseClicked
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_jPanel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -385,28 +369,31 @@ public class InserirProduto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblCadastrar;
-    private javax.swing.JPanel pnlInserir;
-    private javax.swing.JPanel pnlLoja;
+    private javax.swing.JPanel pnlCadastrar1;
+    private javax.swing.JPanel pnlLoja1;
+    private javax.swing.JPanel pnlPesquisar;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtPreco;
     private javax.swing.JTextField txtProduto;

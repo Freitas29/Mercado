@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
  * @author Familia
  */
 public class ProdutoDAO {
+    
+   
 
     private Connection con;
     private String sql;
@@ -154,7 +156,6 @@ public class ProdutoDAO {
             st.setInt(3, p.getQtd());
             st.setString(4, p.getCodigo());
             st.setString(5, p.getCodigo());
-            
             st.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -162,6 +163,28 @@ public class ProdutoDAO {
              return false;
         }finally{
             Banco.desconectar();
+        }
+    }
+    
+    public List pesquisa(Produto p){
+        con = Banco.conectar();
+        try{
+            sql = "select nome,quatidade,preco,codigo from produto where nome like ?";
+            st = con.prepareStatement(sql);
+            st.setString(1, p.getNome()+'%');
+            rs = st.executeQuery();
+             while (rs.next()) {
+                p.setNome(rs.getString("nome"));
+                p.setPreco(rs.getFloat("preco"));
+                p.setQtd(rs.getInt("quatidade"));
+                p.setCodigo(rs.getString("codigo"));
+                listaP.add(p);
+            }
+            return listaP;
+            
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Erro no banco"+e);
+            return null;
         }
     }
 

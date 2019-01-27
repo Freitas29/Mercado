@@ -65,16 +65,6 @@ public class Loja extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         lblCancelarProduto = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        pnlLoja = new javax.swing.JPanel();
-        lblLoja = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        lblInserir = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        pnlEditar = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        pnlCadastrar = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         txtProduto = new javax.swing.JTextField();
@@ -87,6 +77,19 @@ public class Loja extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtResultadoCompra = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        pnlPesquisar = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        pnlCadastrar1 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        pnlLoja1 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addKeyListener(new java.awt.event.KeyAdapter() {
@@ -96,7 +99,7 @@ public class Loja extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlFinalizarCompra.setBackground(new java.awt.Color(0, 1, 16));
+        pnlFinalizarCompra.setBackground(new java.awt.Color(22, 33, 53));
         pnlFinalizarCompra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -104,7 +107,7 @@ public class Loja extends javax.swing.JFrame {
         jLabel9.setText("Pagamento");
         pnlFinalizarCompra.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
-        txtTotalCompra.setBackground(new java.awt.Color(0, 1, 16));
+        txtTotalCompra.setBackground(new java.awt.Color(22, 33, 53));
         txtTotalCompra.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtTotalCompra.setForeground(new java.awt.Color(255, 255, 255));
         txtTotalCompra.setBorder(null);
@@ -112,7 +115,7 @@ public class Loja extends javax.swing.JFrame {
         pnlFinalizarCompra.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 150, 50));
         pnlFinalizarCompra.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 150, -1));
 
-        txtPagamento.setBackground(new java.awt.Color(0, 1, 16));
+        txtPagamento.setBackground(new java.awt.Color(22, 33, 53));
         txtPagamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtPagamento.setForeground(new java.awt.Color(255, 255, 255));
         txtPagamento.setBorder(null);
@@ -133,7 +136,7 @@ public class Loja extends javax.swing.JFrame {
         jLabel11.setText("Troco");
         pnlFinalizarCompra.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, 30));
 
-        txtTroco.setBackground(new java.awt.Color(0, 1, 16));
+        txtTroco.setBackground(new java.awt.Color(22, 33, 53));
         txtTroco.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtTroco.setForeground(new java.awt.Color(255, 255, 255));
         txtTroco.setBorder(null);
@@ -152,12 +155,12 @@ public class Loja extends javax.swing.JFrame {
 
         getContentPane().add(pnlFinalizarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 430, 310));
 
-        modalDados.setBackground(new java.awt.Color(0, 1, 16));
+        modalDados.setBackground(new java.awt.Color(22, 33, 53));
         modalDados.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray));
         modalDados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         modalDados.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 224, 10));
 
-        txtQtd.setBackground(new java.awt.Color(0, 1, 16));
+        txtQtd.setBackground(new java.awt.Color(22, 33, 53));
         txtQtd.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtQtd.setForeground(new java.awt.Color(255, 255, 255));
         txtQtd.setBorder(null);
@@ -190,123 +193,6 @@ public class Loja extends javax.swing.JFrame {
         modalDados.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 360, 130));
 
         getContentPane().add(modalDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 460, 380));
-
-        jPanel1.setBackground(new java.awt.Color(22, 33, 53));
-        jPanel1.setLayout(null);
-
-        pnlLoja.setBackground(new java.awt.Color(39, 55, 80));
-
-        lblLoja.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        lblLoja.setForeground(new java.awt.Color(255, 255, 255));
-        lblLoja.setText("Loja");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/shoppaymentorderbuy-20_icon-icons.com_73877.png"))); // NOI18N
-
-        javax.swing.GroupLayout pnlLojaLayout = new javax.swing.GroupLayout(pnlLoja);
-        pnlLoja.setLayout(pnlLojaLayout);
-        pnlLojaLayout.setHorizontalGroup(
-            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLojaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(37, 37, 37)
-                .addComponent(lblLoja, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-        pnlLojaLayout.setVerticalGroup(
-            pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLojaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlLojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(lblLoja))
-                .addGap(30, 30, 30))
-        );
-
-        jPanel1.add(pnlLoja);
-        pnlLoja.setBounds(0, 80, 220, 89);
-
-        lblInserir.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        lblInserir.setForeground(new java.awt.Color(255, 255, 255));
-        lblInserir.setText("Cadastrar");
-        lblInserir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblInserirMouseClicked(evt);
-            }
-        });
-        jPanel1.add(lblInserir);
-        lblInserir.setBounds(90, 30, 105, 29);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(10, 10, 48, 48);
-
-        pnlEditar.setBackground(new java.awt.Color(22, 33, 53));
-        pnlEditar.setPreferredSize(new java.awt.Dimension(184, 84));
-        pnlEditar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlEditarMouseClicked(evt);
-            }
-        });
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Editar");
-
-        javax.swing.GroupLayout pnlEditarLayout = new javax.swing.GroupLayout(pnlEditar);
-        pnlEditar.setLayout(pnlEditarLayout);
-        pnlEditarLayout.setHorizontalGroup(
-            pnlEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEditarLayout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(0, 67, Short.MAX_VALUE))
-        );
-        pnlEditarLayout.setVerticalGroup(
-            pnlEditarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEditarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(29, 29, 29))
-            .addGroup(pnlEditarLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(pnlEditar);
-        pnlEditar.setBounds(0, 160, 220, 84);
-
-        pnlCadastrar.setBackground(new java.awt.Color(22, 33, 53));
-        pnlCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlCadastrarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlCadastrarLayout = new javax.swing.GroupLayout(pnlCadastrar);
-        pnlCadastrar.setLayout(pnlCadastrarLayout);
-        pnlCadastrarLayout.setHorizontalGroup(
-            pnlCadastrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 220, Short.MAX_VALUE)
-        );
-        pnlCadastrarLayout.setVerticalGroup(
-            pnlCadastrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(pnlCadastrar);
-        pnlCadastrar.setBounds(0, 0, 220, 80);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 710));
 
         jPanel3.setBackground(new java.awt.Color(21, 28, 52));
 
@@ -445,13 +331,126 @@ public class Loja extends javax.swing.JFrame {
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, 790, 120));
 
+        jPanel6.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel6.setPreferredSize(new java.awt.Dimension(220, 710));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlPesquisar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlPesquisar.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlPesquisar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlPesquisarMouseClicked(evt);
+            }
+        });
+        pnlPesquisar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel14.setText("Pesquisar");
+        pnlPesquisar.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, 60));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/3-search-cat_icon-icons.com_76679.png"))); // NOI18N
+        pnlPesquisar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, 80, 68));
+
+        jPanel6.add(pnlPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, -1));
+
+        pnlCadastrar1.setBackground(new java.awt.Color(22, 33, 53));
+        pnlCadastrar1.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlCadastrar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlCadastrar1MouseClicked(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Cadastrar");
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+
+        javax.swing.GroupLayout pnlCadastrar1Layout = new javax.swing.GroupLayout(pnlCadastrar1);
+        pnlCadastrar1.setLayout(pnlCadastrar1Layout);
+        pnlCadastrar1Layout.setHorizontalGroup(
+            pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastrar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(21, 21, 21))
+        );
+        pnlCadastrar1Layout.setVerticalGroup(
+            pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCadastrar1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlCadastrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel16))
+                .addGap(21, 21, 21))
+        );
+
+        jPanel6.add(pnlCadastrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        pnlLoja1.setBackground(new java.awt.Color(39, 55, 80));
+        pnlLoja1.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlLoja1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlLoja1MouseClicked(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel18.setText("Loja");
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/shoppaymentorderbuy-20_icon-icons.com_73877.png"))); // NOI18N
+
+        javax.swing.GroupLayout pnlLoja1Layout = new javax.swing.GroupLayout(pnlLoja1);
+        pnlLoja1.setLayout(pnlLoja1Layout);
+        pnlLoja1Layout.setHorizontalGroup(
+            pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoja1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel18)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        pnlLoja1Layout.setVerticalGroup(
+            pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLoja1Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addGroup(pnlLoja1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addGap(20, 20, 20))
+        );
+
+        jPanel6.add(pnlLoja1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
+
+        jPanel7.setBackground(new java.awt.Color(22, 33, 53));
+        jPanel7.setPreferredSize(new java.awt.Dimension(220, 80));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel20.setText("Editar");
+        jPanel7.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, 60));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/draw_line_icon-icons.com_51076 (1).png"))); // NOI18N
+        jPanel7.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 12, 63, 68));
+
+        jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, -1));
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-
-
-    }//GEN-LAST:event_jLabel5MouseClicked
 
     private void txtProdutoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyPressed
         int key = evt.getKeyCode();
@@ -470,10 +469,6 @@ public class Loja extends javax.swing.JFrame {
             txtPagamento.requestFocusInWindow();
         }
     }//GEN-LAST:event_txtProdutoKeyPressed
-
-    private void lblInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInserirMouseClicked
-
-    }//GEN-LAST:event_lblInserirMouseClicked
 
     private void lblCancelarProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelarProdutoMouseClicked
         txtQtd.setText("");
@@ -495,16 +490,6 @@ public class Loja extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtQtdKeyPressed
 
-
-    private void pnlCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrarMouseClicked
-        this.setVisible(false);
-        new InserirProduto().setVisible(true);
-    }//GEN-LAST:event_pnlCadastrarMouseClicked
-
-    private void pnlEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlEditarMouseClicked
-        this.setVisible(false);
-        new Editar().setVisible(true);
-    }//GEN-LAST:event_pnlEditarMouseClicked
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
 
@@ -540,6 +525,26 @@ public class Loja extends javax.swing.JFrame {
     private void txtTrocoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTrocoKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTrocoKeyPressed
+
+    private void pnlPesquisarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPesquisarMouseClicked
+        this.setVisible(false);
+        new Pesquisar().setVisible(true);
+    }//GEN-LAST:event_pnlPesquisarMouseClicked
+
+    private void pnlCadastrar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCadastrar1MouseClicked
+        this.setVisible(false);
+        new InserirProduto().setVisible(true);
+    }//GEN-LAST:event_pnlCadastrar1MouseClicked
+
+    private void pnlLoja1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLoja1MouseClicked
+        this.setVisible(false);
+        new Loja().setVisible(true);
+    }//GEN-LAST:event_pnlLoja1MouseClicked
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        this.setVisible(false);
+        new Editar().setVisible(true);
+    }//GEN-LAST:event_jPanel7MouseClicked
 
     public void insertTabela(int qtd) {
 
@@ -611,23 +616,28 @@ public class Loja extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
@@ -636,13 +646,11 @@ public class Loja extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel lblCancelarProduto;
-    private javax.swing.JLabel lblInserir;
-    private javax.swing.JLabel lblLoja;
     private javax.swing.JPanel modalDados;
-    private javax.swing.JPanel pnlCadastrar;
-    private javax.swing.JPanel pnlEditar;
+    private javax.swing.JPanel pnlCadastrar1;
     private javax.swing.JPanel pnlFinalizarCompra;
-    private javax.swing.JPanel pnlLoja;
+    private javax.swing.JPanel pnlLoja1;
+    private javax.swing.JPanel pnlPesquisar;
     private javax.swing.JTable tabelaMercado;
     private javax.swing.JTextField txtPagamento;
     private javax.swing.JTextField txtProduto;

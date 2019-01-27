@@ -67,6 +67,9 @@ public class Editar extends javax.swing.JFrame {
         lblCancelar = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        pnlPesquisar = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         pnlCadastrar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -169,6 +172,25 @@ public class Editar extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(22, 33, 53));
         jPanel1.setPreferredSize(new java.awt.Dimension(220, 710));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pnlPesquisar.setBackground(new java.awt.Color(22, 33, 53));
+        pnlPesquisar.setPreferredSize(new java.awt.Dimension(220, 80));
+        pnlPesquisar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlPesquisarMouseClicked(evt);
+            }
+        });
+        pnlPesquisar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel12.setText("Pesquisar");
+        pnlPesquisar.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, 60));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principal/Imagens/3-search-cat_icon-icons.com_76679.png"))); // NOI18N
+        pnlPesquisar.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, 80, 68));
+
+        jPanel1.add(pnlPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, -1));
 
         pnlCadastrar.setBackground(new java.awt.Color(22, 33, 53));
         pnlCadastrar.setPreferredSize(new java.awt.Dimension(220, 80));
@@ -375,7 +397,7 @@ public class Editar extends javax.swing.JFrame {
         produto.setNome(txtNome.getText());
         produto.setPreco(Float.parseFloat(txtPreco.getText()));
         produto.setCodigo(txtCodigo.getText());
-        produto.setQtd(Integer.parseInt(txtCodigo.getText()));
+        produto.setQtd(Integer.parseInt(txtQtd.getText()));
         boolean resu = pDAO.atualiza(produto);
         if (resu == true) {
             pnlAtualizar.setVisible(false);
@@ -385,6 +407,11 @@ public class Editar extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_lblAtualizarMouseClicked
+
+    private void pnlPesquisarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlPesquisarMouseClicked
+        this.setVisible(false);
+        new Pesquisar().setVisible(true);
+    }//GEN-LAST:event_pnlPesquisarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -426,6 +453,8 @@ public class Editar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -447,6 +476,7 @@ public class Editar extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAtualizar;
     private javax.swing.JPanel pnlCadastrar;
     private javax.swing.JPanel pnlLoja;
+    private javax.swing.JPanel pnlPesquisar;
     private javax.swing.JTable tabelaMercado;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtNome;
